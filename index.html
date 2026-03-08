@@ -315,10 +315,51 @@
         }
 
         @media (max-width: 768px) {
-            .portfolio-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 1.8em; }
-            .stock-item { flex-wrap: wrap; }
-            .stock-pnl { width: 100%; text-align: left; margin-top: 10px; }
+            body { padding: 10px; }
+            h1 { font-size: 1.5em; }
+            header { padding: 20px 10px; }
+            .portfolio-grid { grid-template-columns: 1fr; gap: 15px; }
+            .portfolio-card { padding: 15px; border-radius: 15px; }
+            .portfolio-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .portfolio-name { font-size: 1.1em; }
+            .stock-item { 
+                flex-direction: column; 
+                align-items: flex-start; 
+                gap: 10px;
+                padding: 12px;
+            }
+            .stock-info { width: 100%; }
+            .stock-name { font-size: 1em; }
+            .stock-ratio { 
+                width: 100%; 
+                margin-right: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .ratio-bar { flex: 1; max-width: 150px; }
+            .stock-pnl { 
+                width: 100%; 
+                text-align: left; 
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .pnl-label { display: none; }
+            .summary-cards { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .summary-card { padding: 15px; }
+            .summary-value { font-size: 1.5em; }
+            .alert-section { padding: 15px; }
+            .alert-item { flex-direction: column; gap: 8px; }
+            .alert-time { margin-left: 0; }
+            .refresh-btn { width: 90%; padding: 12px 20px; font-size: 1em; }
+        }
+        
+        @media (max-width: 480px) {
+            h1 { font-size: 1.3em; }
+            .summary-cards { grid-template-columns: repeat(2, 1fr); }
+            .summary-value { font-size: 1.3em; }
+            .summary-label { font-size: 0.8em; }
         }
     </style>
 </head>
